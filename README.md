@@ -1,3 +1,3 @@
 # plugin
 
-replicait plugin
+Repligit plugin
