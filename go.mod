@@ -1,6 +1,6 @@
 module github.com/repligit/plugin
 
-go 1.21.5
+go 1.21
 
 require (
 	github.com/hashicorp/go-hclog v1.6.2
