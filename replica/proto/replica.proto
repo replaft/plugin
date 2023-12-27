@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "github.com/repligit/plugin/replica";
+
+package replica;
+
+service ReplicaProto {
+  rpc Send (stream Request) returns (stream Reply) {}
+}
+
+message Request {
+  string apiVersion = 1;
+  string kind = 2;
+  Metadata metadata = 3;
+  Spec spec = 4;
+}
+
+message Metadata {
+  string name = 1;
+}
+
+message Spec {
+  Replica replica = 1;
+}
+
+message Replica {
+  string name = 1;
+}
+
+message Reply {
+  string error = 1;
+}
